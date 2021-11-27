@@ -28,7 +28,7 @@ const Product = () => {
 
 	return (
 		<>
-			<Head title="Detalles del producto | Mercado Libre" />
+			<Head title={`${product.title} | Mercado Libre"`} />
 			{queryData.categories.length > 0 && <Breadcrumbs categories={queryData.categories} />}
 			<PageLayout list={true}>
 				{product.id ? <ProductDetail product={product} /> : null}

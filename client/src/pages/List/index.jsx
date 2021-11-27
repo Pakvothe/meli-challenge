@@ -14,6 +14,7 @@ const List = () => {
 	const query = params.get("search");
 	const listQuery = `?q=${query}`;
 	const queryData = useQuery(listQuery, "List");
+	const capitalize = (str) => `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
 
 	// if (queryData.status === "loading") {
 	// 	return <Loading text="Buscando..." />;
@@ -29,7 +30,7 @@ const List = () => {
 
 	return (
 		<>
-			<Head title={`Resultados de ${query || "tu búsqueda"} | Mercado Libre`} />
+			<Head title={`${capitalize(query) || "tu búsqueda"} | Mercado Libre`} />
 			{queryData.categories.length > 0 && <Breadcrumbs categories={queryData.categories} />}
 			<PageLayout list={true}>
 				{queryData.products.length > 0 && <ProductList products={queryData.products} />}
