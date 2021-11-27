@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { useEffect, useState, useReducer } from "react";
 import axios from "../../utils/axios";
 import { initialState, statusReducer } from "../../store";
@@ -37,4 +38,9 @@ export const useQuery = (ComponentQuery, Component) => {
 		categories,
 		status,
 	};
+};
+
+useQuery.propTypes = {
+	ComponentQuery: PropTypes.string.isRequired,
+	Component: PropTypes.string.isRequired,
 };

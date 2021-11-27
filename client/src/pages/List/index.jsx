@@ -30,7 +30,7 @@ const List = () => {
 
 	return (
 		<>
-			<Head title={`${capitalize(query) || "tu búsqueda"} | Mercado Libre`} />
+			<Head title={`${capitalize(query) || "tu búsqueda"} | MercadoLibre`} />
 			{queryData.categories.length > 0 && <Breadcrumbs categories={queryData.categories} />}
 			<PageLayout list={true}>
 				{queryData.products.length > 0 && <ProductList products={queryData.products} />}

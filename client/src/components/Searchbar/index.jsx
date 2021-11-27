@@ -10,6 +10,7 @@ const Searchbar = () => {
 	const handleSubmit = (ev) => {
 		ev.preventDefault();
 		input && navigate(`/items?search=${input}`);
+		setInput("");
 	};
 
 	const handleChange = (ev) => {
@@ -25,7 +26,7 @@ const Searchbar = () => {
 				value={input}
 				onChange={handleChange}
 			/>
-			<button aria-label="Buscar">
+			<button type="submit" aria-label="Buscar">
 				<img src={Search} alt="Buscar" />
 			</button>
 		</form>
