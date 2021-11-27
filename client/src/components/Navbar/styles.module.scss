@@ -1,0 +1,12 @@
+@import "../../utils//sass/variables";
+
+.navbar {
+	background-color: $meli-yellow;
+	padding: $spacing-100 $spacing-300;
+	text-align: center;
+
+	& > div:only-child {
+		display: flex;
+		align-items: center;
+	}
+}

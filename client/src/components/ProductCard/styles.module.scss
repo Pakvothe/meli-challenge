@@ -1,0 +1,71 @@
+@import "../../utils/sass/variables";
+
+.ProductCard {
+	cursor: pointer;
+	padding: $spacing-200 0;
+	border-bottom: 2px solid $gray-100;
+	display: flex;
+
+	&:last-child {
+		border: none;
+	}
+
+	.Image {
+		height: 180px;
+
+		img {
+			width: 180px;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 4px;
+		}
+	}
+
+	&:hover {
+		span {
+			color: $meli-blue !important;
+		}
+		p {
+			color: $meli-blue !important;
+		}
+		h5 {
+			color: $meli-blue !important;
+		}
+	}
+
+	.Info {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+		width: 100%;
+		padding: 0 $spacing-200;
+
+		span {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			img {
+				margin-left: 8px;
+			}
+
+			h5 {
+				font-size: $font-500;
+				font-weight: 400;
+				color: $gray-300;
+			}
+		}
+
+		p {
+			margin-top: $spacing-100;
+			font-size: $font-300;
+			color: $gray-300;
+			line-height: 22px;
+		}
+	}
+	.Location {
+		font-size: $font-200;
+		color: $gray-300;
+		white-space: nowrap;
+	}
+}

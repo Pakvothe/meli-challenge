@@ -1,0 +1,25 @@
+@import "../../utils//sass/variables";
+
+.Footer {
+	margin-top: auto;
+	height: 51px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: $spacing-200;
+	border-top: 2px solid $meli-yellow;
+
+	& > div:only-child {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: $font-400;
+	}
+
+	a {
+		text-decoration: none;
+		color: $meli-blue;
+		font-weight: 600;
+	}
+}

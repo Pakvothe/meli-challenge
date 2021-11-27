@@ -1,0 +1,63 @@
+@import "./utils/sass/variables";
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+::placeholder {
+	color: $gray-200;
+	opacity: 1;
+}
+
+// /* width */
+// ::-webkit-scrollbar {
+// 	width: 4px;
+// }
+
+// /* Track */
+// ::-webkit-scrollbar-track {
+// 	background: transparent;
+// }
+
+// /* Handle */
+// ::-webkit-scrollbar-thumb {
+// 	background: #8f7cff;
+// 	box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.3);
+// 	transition: color 0.2s ease-in-out;
+// 	border-radius: 15px;
+// }
+
+// /* Handle on hover */
+// ::-webkit-scrollbar-thumb:hover {
+// 	background: #7c66f8;
+// 	box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.3);
+// }
+
+::selection {
+	background-color: $meli-blue;
+	color: $gray-100;
+}
+
+body {
+	margin: 0;
+	font-family: "proxima-nova", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	background-color: $gray-100;
+	word-break: break-word;
+}
+
+#root {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	background-color: #fafafa;
+	padding: $spacing-100;
+	margin-bottom: 3em;
+}

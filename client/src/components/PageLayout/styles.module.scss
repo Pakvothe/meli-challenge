@@ -1,0 +1,25 @@
+@import "../../utils/sass/variables";
+
+.PageLayout {
+	display: flex;
+	margin: 0 $spacing-200;
+	margin-top: $spacing-300;
+	justify-content: center;
+	min-height: 65vh;
+	div {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		h2 {
+			font-size: $font-600;
+			margin: 10px 0;
+			color: $gray-400;
+		}
+
+		p {
+			font-size: $font-300;
+			color: $gray-400;
+		}
+	}
+}
