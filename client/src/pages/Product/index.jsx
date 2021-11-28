@@ -4,32 +4,32 @@ import Breadcrumbs from "../../components/Breadcrumb";
 import PageLayout from "../../components/PageLayout";
 import Head from "../../components/Head";
 import ProductDetail from "../../components/ProductDetail";
-// import Loading from "../../components/Loading";
-// import Error from "../../components/Error";
-// import ProductNotFound from "../../components/ProductNotFound";
+import Loading from "../../components/Loading";
+import Error404 from "../../components/Error404";
+import Error from "../../components/Error";
 
 const Product = () => {
 	const { id } = useParams();
 	const productQuery = `/${id}`;
-	const queryData = useQuery(productQuery, "Product");
-	const product = queryData.products;
+	const { products, categories, status } = useQuery(productQuery, "Product");
+	const product = products;
 
-	// if (queryData.status === "loading") {
-	// 	return <Loading text="Buscando..." />;
-	// }
+	if (status === "loading") {
+		return <Loading text="Buscando..." />;
+	}
 
-	// if (queryData.status === "error-404") {
-	// 	return <ProductNotFound />;
-	// }
+	if (status === "error-404") {
+		return <Error404 />;
+	}
 
-	// if (queryData.status === "error") {
-	// 	return <Error />;
-	// }
+	if (status === "error") {
+		return <Error />;
+	}
 
 	return (
 		<>
 			<Head title={`${product.title} | MercadoLibre"`} />
-			{queryData.categories.length > 0 && <Breadcrumbs categories={queryData.categories} />}
+			{categories.length > 0 && <Breadcrumbs categories={categories} />}
 			<PageLayout list={true}>
 				{product.id ? <ProductDetail product={product} /> : null}
 			</PageLayout>

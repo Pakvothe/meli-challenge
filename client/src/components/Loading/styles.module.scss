@@ -1,0 +1,17 @@
+@import "../../utils/sass/variables";
+
+.Spinner {
+	width: 50px;
+	height: 50px;
+	border: 10px solid $meli-yellow;
+	border-left-color: lighten($meli-yellow, 20%);
+	border-radius: 50%;
+	animation: spin 650ms infinite linear;
+	margin-bottom: $spacing-100;
+}
+
+@keyframes spin {
+	100% {
+		transform: rotate(360deg);
+	}
+}

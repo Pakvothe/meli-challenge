@@ -68,4 +68,18 @@
 		color: $gray-300;
 		white-space: nowrap;
 	}
+
+	@media (max-width: $breakpoint-xs) {
+		padding: $spacing-100 0;
+		flex-direction: column-reverse;
+
+		.Image {
+			margin-top: $spacing-100;
+		}
+
+		.Info {
+			margin-top: $spacing-100;
+			padding: 0;
+		}
+	}
 }

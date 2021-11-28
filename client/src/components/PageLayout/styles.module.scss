@@ -2,8 +2,7 @@
 
 .PageLayout {
 	display: flex;
-	margin: 0 $spacing-200;
-	margin-top: $spacing-300;
+	margin: $spacing-300 $spacing-200;
 	justify-content: center;
 	min-height: 65vh;
 	div {
@@ -21,5 +20,9 @@
 			font-size: $font-300;
 			color: $gray-400;
 		}
+	}
+
+	@media (max-width: $breakpoint-xs) {
+		margin: $spacing-200 $spacing-100;
 	}
 }
