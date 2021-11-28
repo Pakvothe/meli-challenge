@@ -17,7 +17,7 @@ const Searchbar = () => {
 		setInput(ev.target.value);
 	};
 	return (
-		<form className={styles.searchBar} onSubmit={handleSubmit}>
+		<form className={styles.searchBar} onSubmit={handleSubmit} data-testid="search-form">
 			<label htmlFor="search-input">Buscar un producto</label>
 			<input
 				type="text"
