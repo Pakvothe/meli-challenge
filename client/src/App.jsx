@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import List from "./pages/List";
 import Product from "./pages/Product";
+import Page404 from "./pages/Page404";
 
 const App = () => {
 	return (
@@ -16,6 +17,7 @@ const App = () => {
 			<Navbar />
 			<Container>
 				<Routes>
+					<Route path="*" element={<Page404 />} />
 					<Route exact path="/" element={<Home />} />
 					<Route exact path="/items" element={<List />} />
 					<Route exact path="/items/:id" element={<Product />} />
