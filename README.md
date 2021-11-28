@@ -1,5 +1,7 @@
 # MercadoLibre Frontend Challenge
 
+</br>
+
 ## Instalación
 
 Necesitarás tener [Docker](https://docs.docker.com/get-docker/)
