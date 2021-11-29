@@ -69,7 +69,7 @@
 		white-space: nowrap;
 	}
 
-	@media (max-width: $breakpoint-xs) {
+	@media (max-width: $breakpoint-md) {
 		padding: $spacing-100 0;
 		flex-direction: column-reverse;
 

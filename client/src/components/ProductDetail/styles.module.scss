@@ -47,6 +47,7 @@
 	}
 
 	.RightDivider {
+		width: 300px;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
@@ -86,7 +87,7 @@
 		}
 	}
 
-	@media (max-width: $breakpoint-xs) {
+	@media (max-width: $breakpoint-md) {
 		flex-direction: column-reverse;
 
 		.LeftDivider {
@@ -94,6 +95,11 @@
 		}
 
 		.RightDivider {
+			width: 100%;
+
+			> h3 {
+				width: 100%;
+			}
 			> button {
 				margin-bottom: $spacing-100;
 			}
