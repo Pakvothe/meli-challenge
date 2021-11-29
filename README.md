@@ -25,7 +25,7 @@ Realizar lo mismo para el directorio client: desde la carpeta raiz ejecutar `cd 
 
 </br>
 
-En el caso de tener en la pc una versión de node que sea 17 o superior hay que agregar al archivo docker-compose.yml de main lo siguiente debajo de "ports":
+> En el caso de tener en la pc una versión de node que sea 17 o superior hay que agregar al archivo docker-compose.yml de main lo siguiente debajo de "ports":
 
 ```bash
  environment:
