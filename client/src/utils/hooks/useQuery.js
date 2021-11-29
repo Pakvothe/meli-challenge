@@ -14,7 +14,6 @@ export const useQuery = (ComponentQuery, Component) => {
 		axios
 			.get(`/api/items${ComponentQuery}`)
 			.then(({ data }) => {
-				console.log(`data`, data);
 				setCategories(data.categories);
 
 				if (Component === "Product") {
