@@ -1,12 +1,13 @@
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet-async";
+import Logo from "../../assets/logo.png";
 
 const Head = ({ title }) => {
 	return (
 		<Helmet>
 			<meta charset="utf-8" />
 			<title>{title}</title>
-			<link rel="icon" href="logo.png" type="image/x-icon" />
+			<link rel="icon" href={Logo} type="image/x-icon" />
 			<meta name="description" content="Desafío técnico de MercadoLibre." />
 			<meta name="keywords" content="Mercado Libre, React, Front-end, JavaScript" />
 			<meta name="author" content="Franco Ortiz" />
